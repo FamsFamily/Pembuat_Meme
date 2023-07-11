@@ -1,40 +1,40 @@
-# Import
+# Impor
 from flask import Flask, render_template, request, send_from_directory
 
 
 app = Flask(__name__)
 
-# Form results
+# Hasil formulir
 @app.route('/', methods=['GET','POST'])
 def index():
     if request.method == 'POST':
-        # getting the selected image
+        # mendapatkan gambar yang dipilih
         selected_image = request.form.get('image-selector')
 
-        # Assignment #2.Receiving the text
+        # Tugas #2. Menerima teks
         
 
-        # Assignment #3. Receiving the text's positioning
+        # Tugas #3. Menerima posisi teks
        
 
-        # Assignment #3. Receiving the text's colour
+        # Tugas #3. Menerima warna teks
         
 
         return render_template('index.html', 
-                               # Displaying the selected  image
+                               # Menampilkan gambar yang dipilih
                                selected_image=selected_image, 
 
-                               # Assignment #2. Displaying the text
+                               # Tugas #2. Menampilkan teks
                                
 
-                               # Assignment #3. Displaying the colour 
+                               # Tugas #3. Menampilkan warna
                                
                                
-                               # Assignment #3. Displaying the text's positioning
+                               # Tugas #3. Menampilkan posisi teks
 
                                )
     else:
-        # Displaying the first image by default
+        # Menampilkan gambar pertama secara default
         return render_template('index.html', selected_image='logo.svg')
 
 
